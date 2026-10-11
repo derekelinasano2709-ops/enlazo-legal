@@ -1,37 +1,472 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Terms of Service | Enlazo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080d1b">
+
+<meta name="description" content="Términos de servicio oficiales de Enlazo.">
+
+<title>Enlazo — Términos de servicio</title>
+
 <style>
-body{font-family:Arial,sans-serif;max-width:800px;margin:50px auto;padding:0 22px;line-height:1.7;color:#263247;background:#f5f8ff}
-h1,h2{color:#2457c5}
-header{border-bottom:2px solid #dbe5ff;margin-bottom:25px}
-footer{margin-top:40px;padding-top:15px;border-top:1px solid #dbe5ff;color:#65718a;font-size:14px}
+:root {
+  --bg: #080d1b;
+  --panel: rgba(19, 29, 53, .82);
+  --border: rgba(153, 180, 255, .15);
+  --text: #f1f5ff;
+  --muted: #aab7d5;
+  --blue: #83a8ff;
+  --cyan: #6de4ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(ellipse at 10% 0%, #20396c 0%, transparent 42%),
+    radial-gradient(ellipse at 95% 25%, #10394b 0%, transparent 35%),
+    var(--bg);
+  color: var(--text);
+  font-family: Inter, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  line-height: 1.75;
+}
+
+a {
+  color: var(--cyan);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 28px 22px 60px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--text);
+  font-size: 21px;
+  font-weight: 800;
+}
+
+.logo {
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  border-radius: 15px;
+  color: #07101e;
+  font-size: 25px;
+  background: linear-gradient(135deg, #8aafff, #65e4ef);
+  box-shadow: 0 8px 30px #649bff35;
+}
+
+.brand small {
+  display: block;
+  color: var(--muted);
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.nav-link,
+select {
+  padding: 11px 14px;
+  color: var(--text);
+  background: #121d35;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  font: inherit;
+  font-size: 13px;
+}
+
+select {
+  cursor: pointer;
+}
+
+.hero {
+  padding: 75px 0 36px;
+  max-width: 800px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 7px 13px;
+  color: #bfd2ff;
+  background: #83a8ff12;
+  border: 1px solid #83a8ff35;
+  border-radius: 100px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 22px 0 15px;
+  font-size: clamp(38px, 7vw, 66px);
+  line-height: 1.08;
+  letter-spacing: -2px;
+}
+
+.hero p {
+  max-width: 700px;
+  color: var(--muted);
+  font-size: 18px;
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.pill {
+  padding: 7px 12px;
+  color: var(--muted);
+  background: #ffffff06;
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  font-size: 12px;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 245px minmax(0, 1fr);
+  gap: 22px;
+  align-items: start;
+}
+
+.sidebar,
+.content {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  box-shadow: 0 20px 70px #0002;
+  backdrop-filter: blur(18px);
+}
+
+.sidebar {
+  position: sticky;
+  top: 20px;
+  padding: 20px;
+}
+
+.sidebar-title {
+  margin-bottom: 12px;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.sidebar a {
+  display: block;
+  padding: 9px 10px;
+  color: #dbe5ff;
+  border-radius: 10px;
+  font-size: 13px;
+}
+
+.sidebar a:hover {
+  background: #ffffff0a;
+  text-decoration: none;
+}
+
+.content {
+  padding: clamp(22px, 4vw, 42px);
+}
+
+section {
+  padding-bottom: 26px;
+  margin-bottom: 26px;
+  border-bottom: 1px solid var(--border);
+  scroll-margin-top: 24px;
+}
+
+section:last-child {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border-bottom: 0;
+}
+
+h2 {
+  margin: 0 0 12px;
+  font-size: 21px;
+  line-height: 1.4;
+  letter-spacing: -.4px;
+}
+
+section p {
+  margin: 0;
+  color: #c4d0e9;
+}
+
+.notice {
+  margin-top: 22px;
+  padding: 16px;
+  color: #c8efff;
+  background: #6de4ff0a;
+  border: 1px solid #6de4ff28;
+  border-radius: 14px;
+  font-size: 13px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-top: 30px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+@media (max-width: 760px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    position: static;
+  }
+
+  .hero {
+    padding-top: 48px;
+  }
+
+  .header-actions {
+    width: 100%;
+  }
+
+  .content {
+    padding: 23px;
+  }
+}
 </style>
 </head>
+
 <body>
+<div class="container">
+
 <header>
-<h1>Enlazo — Terms of Service</h1>
-<p>Last updated: October 10, 2026</p>
+  <a class="brand" href="./">
+    <span class="logo">E</span>
+    <span>
+      Enlazo
+      <small>CONNECT THROUGH PLAY</small>
+    </span>
+  </a>
+
+  <div class="header-actions">
+    <a class="nav-link" href="terms.html" id="termsLink">Términos</a>
+    <a class="nav-link" href="privacy.html" id="privacyLink">Privacidad</a>
+
+    <select id="language" aria-label="Seleccionar idioma">
+      <option value="es">🇪🇸 Español</option>
+      <option value="en">🇺🇸 English</option>
+      <option value="pt">🇧🇷 Português</option>
+      <option value="fr">🇫🇷 Français</option>
+    </select>
+  </div>
 </header>
-<h2>1. Acceptance of Terms</h2>
-<p>By using Enlazo, a Discord bot that provides interactive games and community features, you agree to these Terms of Service. If you do not agree, please stop using the bot.</p>
-<h2>2. Acceptable Use</h2>
-<p>You agree to use Enlazo respectfully and lawfully. You must not exploit bugs, disrupt its operation, abuse its commands, or use the bot to harass other users.</p>
-<h2>3. Availability</h2>
-<p>Enlazo is provided on an as-available basis. Features may change, be temporarily unavailable, or be discontinued without notice.</p>
-<h2>4. Game Data and Progress</h2>
-<p>Game statistics, scores, levels, streaks, and other progress may be stored to provide the bot's features. We cannot guarantee that all progress will be preserved indefinitely.</p>
-<h2>5. Enforcement</h2>
-<p>Access may be restricted when necessary to prevent abuse, protect the service, or maintain a safe experience for users.</p>
-<h2>6. Disclaimer</h2>
-<p>Enlazo is provided without warranties to the extent permitted by applicable law. We are not responsible for interruptions, data loss, or service unavailability except where applicable law requires otherwise.</p>
-<h2>7. Changes to These Terms</h2>
-<p>These terms may be updated as Enlazo evolves. Continued use after changes are published constitutes acceptance of the updated terms where permitted by law.</p>
-<h2>8. Contact</h2>
-<p>For questions about these terms, contact the Enlazo team through the official support channel, if available.</p>
-<footer>© 2026 Enlazo. All rights reserved.</footer>
+
+<div class="hero">
+  <span class="badge" id="badge">CENTRO LEGAL DE ENLAZO</span>
+
+  <h1 id="pageTitle">Términos de servicio</h1>
+
+  <p id="intro">
+    Reglas claras para disfrutar de Enlazo, participar en partidas
+    y mantener una comunidad respetuosa.
+  </p>
+
+  <div class="meta">
+    <span class="pill" id="updated">Actualizado: 10 de octubre de 2026</span>
+    <span class="pill" id="reading">Lectura aproximada: 4 min</span>
+  </div>
+</div>
+
+<div class="layout">
+
+  <aside class="sidebar">
+    <div class="sidebar-title" id="contentsTitle">EN ESTA PÁGINA</div>
+    <nav id="contents"></nav>
+  </aside>
+
+  <main class="content" id="sections"></main>
+
+</div>
+
+<footer>
+  <span>© <span id="year"></span> Enlazo</span>
+  <span id="footerText">Juega, compite y conecta.</span>
+</footer>
+
+</div>
+
+<script>
+const translations = {
+  es: {
+    badge: "CENTRO LEGAL DE ENLAZO",
+    title: "Términos de servicio",
+    intro: "Reglas claras para disfrutar de Enlazo, participar en partidas y mantener una comunidad respetuosa.",
+    updated: "Actualizado: 10 de octubre de 2026",
+    reading: "Lectura aproximada: 4 min",
+    contentsTitle: "EN ESTA PÁGINA",
+    termsLink: "Términos",
+    privacyLink: "Privacidad",
+    footer: "Juega, compite y conecta.",
+    sections: [
+      ["accept", "1. Aceptación de los términos", "Al utilizar Enlazo, sus comandos o sus funciones en Discord, aceptas estos términos. Si no estás de acuerdo, deja de utilizar el bot."],
+      ["service", "2. Funciones de Enlazo", "Enlazo puede ofrecer juegos, rondas, puntuaciones, estadísticas, clasificaciones, logros y configuraciones para servidores. Las funciones pueden cambiar, actualizarse, pausarse o retirarse."],
+      ["conduct", "3. Uso responsable", "No debes abusar de los comandos, explotar errores deliberadamente, interferir con el funcionamiento del bot, intentar acceder a información ajena ni utilizar Enlazo para acosar o perjudicar a otras personas. También debes respetar las reglas de Discord."],
+      ["data", "4. Datos y privacidad", "Enlazo puede procesar identificadores y nombres de Discord, puntuaciones, estadísticas, clasificaciones, historiales de partidas, participación y ajustes de servidores, además de otros datos técnicos necesarios. Consulta nuestra Política de privacidad para conocer más detalles."],
+      ["availability", "5. Disponibilidad del servicio", "Enlazo se proporciona según su disponibilidad. Puede experimentar errores, mantenimiento o interrupciones. No garantizamos que el servicio funcione sin interrupciones ni que todos los datos estén siempre disponibles."],
+      ["ownership", "6. Propiedad intelectual", "El nombre, la identidad visual, el código y los elementos originales de Enlazo pertenecen a sus respectivos titulares. No debes presentarlos como propios, redistribuirlos o explotarlos comercialmente sin autorización cuando esta sea necesaria."],
+      ["thirdparty", "7. Servicios de terceros", "Enlazo funciona mediante Discord y puede depender de proveedores externos de alojamiento o almacenamiento. El uso de esos servicios también está sujeto a sus propios términos y políticas."],
+      ["suspension", "8. Restricciones de acceso", "El acceso a determinadas funciones puede limitarse si se detecta abuso, riesgos de seguridad o incumplimientos de estos términos. Las medidas aplicadas dependerán de la situación."],
+      ["changes", "9. Cambios en estos términos", "Estos términos pueden actualizarse cuando cambien las funciones o las necesidades del servicio. La fecha de actualización aparecerá en esta página. Te recomendamos revisarlos periódicamente."],
+      ["contact", "10. Contacto", "Si tienes preguntas sobre estos términos, contacta al equipo de Enlazo mediante su canal oficial de soporte. No incluyas contraseñas ni información personal sensible en tu solicitud."]
+    ]
+  },
+
+  en: {
+    badge: "ENLAZO LEGAL CENTER",
+    title: "Terms of Service",
+    intro: "Clear rules for enjoying Enlazo, joining matches, and helping maintain a respectful community.",
+    updated: "Updated: October 10, 2026",
+    reading: "Approx. 4 min read",
+    contentsTitle: "ON THIS PAGE",
+    termsLink: "Terms",
+    privacyLink: "Privacy",
+    footer: "Play, compete, and connect.",
+    sections: [
+      ["accept", "1. Acceptance of Terms", "By using Enlazo, its commands, or its Discord features, you agree to these terms. If you disagree, stop using the bot."],
+      ["service", "2. Enlazo Features", "Enlazo may provide games, rounds, scores, statistics, leaderboards, achievements, and server settings. Features may change, be updated, paused, or discontinued."],
+      ["conduct", "3. Responsible Use", "Do not abuse commands, deliberately exploit bugs, interfere with the bot, attempt to access other people's information, or use Enlazo to harass or harm others. You must also follow Discord's rules."],
+      ["data", "4. Data and Privacy", "Enlazo may process Discord identifiers and usernames, scores, statistics, rankings, match history, participation, server settings, and other necessary technical data. See our Privacy Policy for more details."],
+      ["availability", "5. Service Availability", "Enlazo is provided subject to availability. Errors, maintenance, or interruptions may occur. We do not guarantee uninterrupted operation or constant data availability."],
+      ["ownership", "6. Intellectual Property", "Enlazo's name, visual identity, code, and original elements belong to their respective owners. You may not claim them as your own, redistribute them, or commercially exploit them without required permission."],
+      ["thirdparty", "7. Third-Party Services", "Enlazo operates through Discord and may rely on external hosting or storage providers. Those services are also governed by their own terms and policies."],
+      ["suspension", "8. Access Restrictions", "Access to certain features may be limited if abuse, security risks, or violations of these terms are detected. Any action depends on the circumstances."],
+      ["changes", "9. Changes to These Terms", "These terms may be updated as features or service needs change. The update date will appear on this page. We recommend reviewing them periodically."],
+      ["contact", "10. Contact", "For questions about these terms, contact the Enlazo team through its official support channel. Do not include passwords or sensitive personal information in your request."]
+    ]
+  },
+
+  pt: {
+    badge: "CENTRO JURÍDICO ENLAZO",
+    title: "Termos de Serviço",
+    intro: "Regras claras para aproveitar o Enlazo, participar de partidas e manter uma comunidade respeitosa.",
+    updated: "Atualizado: 10 de outubro de 2026",
+    reading: "Leitura aproximada: 4 min",
+    contentsTitle: "NESTA PÁGINA",
+    termsLink: "Termos",
+    privacyLink: "Privacidade",
+    footer: "Jogue, compita e conecte-se.",
+    sections: [
+      ["accept", "1. Aceitação dos termos", "Ao usar o Enlazo, seus comandos ou recursos no Discord, você aceita estes termos. Se não concordar, pare de usar o bot."],
+      ["service", "2. Recursos do Enlazo", "O Enlazo pode oferecer jogos, rodadas, pontuações, estatísticas, rankings, conquistas e configurações de servidores. Os recursos podem mudar, ser atualizados, pausados ou descontinuados."],
+      ["conduct", "3. Uso responsável", "Não abuse dos comandos, explore falhas deliberadamente, interfira no bot, tente acessar informações de outras pessoas ou use o Enlazo para assediar ou prejudicar alguém. Respeite também as regras do Discord."],
+      ["data", "4. Dados e privacidade", "O Enlazo pode processar identificadores e nomes do Discord, pontuações, estatísticas, rankings, histórico de partidas, participação, configurações de servidores e outros dados técnicos necessários. Consulte nossa Política de Privacidade."],
+      ["availability", "5. Disponibilidade", "O Enlazo é fornecido conforme sua disponibilidade. Podem ocorrer erros, manutenção ou interrupções. Não garantimos funcionamento ininterrupto nem disponibilidade constante dos dados."],
+      ["ownership", "6. Propriedade intelectual", "O nome, a identidade visual, o código e os elementos originais do Enlazo pertencem aos respectivos titulares. Não os apresente como seus nem os redistribua ou explore comercialmente sem a autorização necessária."],
+      ["thirdparty", "7. Serviços de terceiros", "O Enlazo funciona por meio do Discord e pode depender de provedores externos de hospedagem ou armazenamento, sujeitos aos próprios termos e políticas."],
+      ["suspension", "8. Restrições de acesso", "O acesso a determinados recursos pode ser limitado se forem detectados abusos, riscos de segurança ou violações destes termos."],
+      ["changes", "9. Alterações nos termos", "Estes termos podem ser atualizados conforme as funções ou necessidades do serviço mudem. A data de atualização aparecerá nesta página."],
+      ["contact", "10. Contato", "Para dúvidas, entre em contato com a equipe do Enlazo pelo canal oficial de suporte. Não inclua senhas nem informações pessoais sensíveis."]
+    ]
+  },
+
+  fr: {
+    badge: "CENTRE JURIDIQUE ENLAZO",
+    title: "Conditions d’utilisation",
+    intro: "Des règles claires pour profiter d’Enlazo, participer aux parties et préserver une communauté respectueuse.",
+    updated: "Mis à jour : 10 octobre 2026",
+    reading: "Lecture : environ 4 min",
+    contentsTitle: "SUR CETTE PAGE",
+    termsLink: "Conditions",
+    privacyLink: "Confidentialité",
+    footer: "Jouez, rivalisez et échangez.",
+    sections: [
+      ["accept", "1. Acceptation des conditions", "En utilisant Enlazo, ses commandes ou ses fonctionnalités Discord, vous acceptez ces conditions. Sinon, cessez d’utiliser le bot."],
+      ["service", "2. Fonctionnalités d’Enlazo", "Enlazo peut proposer des jeux, des manches, des scores, des statistiques, des classements, des succès et des paramètres de serveur. Ces fonctionnalités peuvent évoluer, être mises en pause ou supprimées."],
+      ["conduct", "3. Utilisation responsable", "N’abusez pas des commandes, n’exploitez pas volontairement les bugs, ne perturbez pas le bot, ne tentez pas d’accéder aux informations d’autrui et n’utilisez pas Enlazo pour harceler ou nuire à quelqu’un. Respectez également les règles de Discord."],
+      ["data", "4. Données et confidentialité", "Enlazo peut traiter les identifiants et noms Discord, scores, statistiques, classements, historiques de parties, participation, paramètres de serveur et autres données techniques nécessaires. Consultez notre Politique de confidentialité."],
+      ["availability", "5. Disponibilité du service", "Enlazo est fourni selon sa disponibilité. Des erreurs, opérations de maintenance ou interruptions peuvent survenir. Le fonctionnement continu n’est pas garanti."],
+      ["ownership", "6. Propriété intellectuelle", "Le nom, l’identité visuelle, le code et les éléments originaux d’Enlazo appartiennent à leurs titulaires respectifs. Ne les revendiquez pas comme vôtres et ne les redistribuez pas sans autorisation lorsque celle-ci est requise."],
+      ["thirdparty", "7. Services tiers", "Enlazo fonctionne via Discord et peut dépendre de fournisseurs externes d’hébergement ou de stockage, soumis à leurs propres conditions et politiques."],
+      ["suspension", "8. Restrictions d’accès", "L’accès à certaines fonctionnalités peut être limité en cas d’abus, de risques de sécurité ou de violation de ces conditions."],
+      ["changes", "9. Modifications des conditions", "Ces conditions peuvent être mises à jour lorsque les fonctionnalités ou les besoins du service évoluent. La date de mise à jour figurera sur cette page."],
+      ["contact", "10. Contact", "Pour toute question, contactez l’équipe Enlazo via son canal officiel d’assistance. Ne transmettez pas de mots de passe ni d’informations personnelles sensibles."]
+    ]
+  }
+};
+
+function renderPage() {
+  const lang = document.getElementById("language").value;
+  const t = translations[lang];
+
+  document.documentElement.lang = lang;
+  document.getElementById("badge").textContent = t.badge;
+  document.getElementById("pageTitle").textContent = t.title;
+  document.getElementById("intro").textContent = t.intro;
+  document.getElementById("updated").textContent = t.updated;
+  document.getElementById("reading").textContent = t.reading;
+  document.getElementById("contentsTitle").textContent = t.contentsTitle;
+  document.getElementById("termsLink").textContent = t.termsLink;
+  document.getElementById("privacyLink").textContent = t.privacyLink;
+  document.getElementById("footerText").textContent = t.footer;
+
+  document.getElementById("contents").innerHTML =
+    t.sections.map(s =>
+      `<a href="#${s[0]}">${s[1]}</a>`
+    ).join("");
+
+  document.getElementById("sections").innerHTML =
+    t.sections.map(s =>
+      `<section id="${s[0]}"><h2>${s[1]}</h2><p>${s[2]}</p></section>`
+    ).join("");
+}
+
+document.getElementById("language").addEventListener("change", renderPage);
+document.getElementById("year").textContent = new Date().getFullYear();
+
+renderPage();
+</script>
+
 </body>
 </html>
