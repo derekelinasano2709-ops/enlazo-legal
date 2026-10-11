@@ -1,41 +1,432 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Privacy Policy | Enlazo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080d1b">
+<meta name="description" content="Política de privacidad de Enlazo.">
+<title>Enlazo — Política de privacidad</title>
+
 <style>
-body{font-family:Arial,sans-serif;max-width:800px;margin:50px auto;padding:0 22px;line-height:1.7;color:#263247;background:#f5f8ff}
-h1,h2{color:#2457c5}
-header{border-bottom:2px solid #dbe5ff;margin-bottom:25px}
-footer{margin-top:40px;padding-top:15px;border-top:1px solid #dbe5ff;color:#65718a;font-size:14px}
+:root {
+  --bg: #080d1b;
+  --panel: rgba(19, 29, 53, .82);
+  --border: rgba(153, 180, 255, .15);
+  --text: #f1f5ff;
+  --muted: #aab7d5;
+  --blue: #83a8ff;
+  --cyan: #6de4ff;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(ellipse at 10% 0%, #20396c 0%, transparent 42%),
+    radial-gradient(ellipse at 95% 25%, #10394b 0%, transparent 35%),
+    var(--bg);
+  color: var(--text);
+  font-family: Inter, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  line-height: 1.75;
+}
+
+a {
+  color: var(--cyan);
+  text-decoration: none;
+}
+
+a:hover { text-decoration: underline; }
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 28px 22px 60px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--text);
+  font-size: 21px;
+  font-weight: 800;
+}
+
+.logo {
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  border-radius: 15px;
+  color: #07101e;
+  font-size: 25px;
+  background: linear-gradient(135deg, #8aafff, #65e4ef);
+  box-shadow: 0 8px 30px #649bff35;
+}
+
+.brand small {
+  display: block;
+  color: var(--muted);
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.nav-link, select {
+  padding: 11px 14px;
+  color: var(--text);
+  background: #121d35;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  font: inherit;
+  font-size: 13px;
+}
+
+select { cursor: pointer; }
+
+.hero {
+  padding: 75px 0 36px;
+  max-width: 800px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 7px 13px;
+  color: #bfd2ff;
+  background: #83a8ff12;
+  border: 1px solid #83a8ff35;
+  border-radius: 100px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 22px 0 15px;
+  font-size: clamp(38px, 7vw, 66px);
+  line-height: 1.08;
+  letter-spacing: -2px;
+}
+
+.hero p {
+  max-width: 700px;
+  color: var(--muted);
+  font-size: 18px;
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.pill {
+  padding: 7px 12px;
+  color: var(--muted);
+  background: #ffffff06;
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  font-size: 12px;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 245px minmax(0, 1fr);
+  gap: 22px;
+  align-items: start;
+}
+
+.sidebar, .content {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  box-shadow: 0 20px 70px #0002;
+  backdrop-filter: blur(18px);
+}
+
+.sidebar {
+  position: sticky;
+  top: 20px;
+  padding: 20px;
+}
+
+.sidebar-title {
+  margin-bottom: 12px;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.sidebar a {
+  display: block;
+  padding: 9px 10px;
+  color: #dbe5ff;
+  border-radius: 10px;
+  font-size: 13px;
+}
+
+.sidebar a:hover {
+  background: #ffffff0a;
+  text-decoration: none;
+}
+
+.content { padding: clamp(22px, 4vw, 42px); }
+
+section {
+  padding-bottom: 26px;
+  margin-bottom: 26px;
+  border-bottom: 1px solid var(--border);
+  scroll-margin-top: 24px;
+}
+
+section:last-child {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border-bottom: 0;
+}
+
+h2 {
+  margin: 0 0 12px;
+  font-size: 21px;
+  line-height: 1.4;
+  letter-spacing: -.4px;
+}
+
+section p { margin: 0; color: #c4d0e9; }
+
+.notice {
+  margin-top: 22px;
+  padding: 16px;
+  color: #c8efff;
+  background: #6de4ff0a;
+  border: 1px solid #6de4ff28;
+  border-radius: 14px;
+  font-size: 13px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-top: 30px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+@media (max-width: 760px) {
+  .layout { grid-template-columns: 1fr; }
+  .sidebar { position: static; }
+  .hero { padding-top: 48px; }
+  .header-actions { width: 100%; }
+  .content { padding: 23px; }
+}
 </style>
 </head>
+
 <body>
+<div class="container">
+
 <header>
-<h1>Enlazo — Privacy Policy</h1>
-<p>Last updated: October 10, 2026</p>
+  <a class="brand" href="./">
+    <span class="logo">E</span>
+    <span>
+      Enlazo
+      <small>CONNECT THROUGH PLAY</small>
+    </span>
+  </a>
+
+  <div class="header-actions">
+    <a class="nav-link" href="terms.html" id="termsLink">Términos</a>
+    <a class="nav-link" href="privacy.html" id="privacyLink">Privacidad</a>
+
+    <select id="language" aria-label="Seleccionar idioma">
+      <option value="es">🇪🇸 Español</option>
+      <option value="en">🇺🇸 English</option>
+      <option value="pt">🇧🇷 Português</option>
+      <option value="fr">🇫🇷 Français</option>
+    </select>
+  </div>
 </header>
-<h2>1. Introduction</h2>
-<p>This Privacy Policy explains how Enlazo handles information when you interact with our Discord bot.</p>
-<h2>2. Information We May Process</h2>
-<p>Depending on the features you use, Enlazo may process Discord user IDs, server IDs, usernames, game scores, levels, streaks, achievements, game activity, and commands submitted to the bot.</p>
-<h2>3. How Information Is Used</h2>
-<p>Information is used to operate games, maintain player progress, calculate rankings, provide rewards, respond to commands, and improve the service.</p>
-<h2>4. Data Storage and Retention</h2>
-<p>Some information may be stored to support persistent features. Information is retained only as needed for the bot's operation, subject to technical limitations and applicable requirements. Actual storage and deletion practices depend on the bot's implementation.</p>
-<h2>5. Sharing of Information</h2>
-<p>We do not sell personal information. Information may be processed by Discord and the hosting or infrastructure providers required to operate Enlazo. Information may also be disclosed when required by law.</p>
-<h2>6. Security</h2>
-<p>Reasonable measures are used to protect stored information, but no online service can guarantee absolute security.</p>
-<h2>7. Your Choices and Requests</h2>
-<p>If you have questions about information associated with your use of Enlazo or wish to request its deletion, contact the Enlazo team through the official support channel, if available. Requests are handled subject to applicable law and technical limitations.</p>
-<h2>8. Children's Privacy</h2>
-<p>Enlazo is not intended to collect personal information directly from children outside the ordinary operation of Discord. Users must comply with Discord's minimum age requirements and applicable law.</p>
-<h2>9. Changes to This Policy</h2>
-<p>This policy may be updated as the bot changes. The latest version will be published on this page.</p>
-<h2>10. Contact</h2>
-<p>For privacy questions or requests, contact the Enlazo team through the official support channel, if available.</p>
-<footer>© 2026 Enlazo. All rights reserved.</footer>
+
+<div class="hero">
+  <span class="badge" id="badge">PRIVACIDAD Y TRANSPARENCIA</span>
+
+  <h1 id="pageTitle">Política de privacidad</h1>
+
+  <p id="intro">
+    Conoce qué información puede procesar Enlazo, cómo se utiliza
+    y cómo puedes contactar al equipo sobre tus datos.
+  </p>
+
+  <div class="meta">
+    <span class="pill" id="updated">Actualizado: 10 de octubre de 2026</span>
+    <span class="pill" id="reading">Lectura aproximada: 5 min</span>
+  </div>
+</div>
+
+<div class="layout">
+  <aside class="sidebar">
+    <div class="sidebar-title" id="contentsTitle">EN ESTA PÁGINA</div>
+    <nav id="contents"></nav>
+  </aside>
+
+  <main class="content" id="sections"></main>
+</div>
+
+<footer>
+  <span>© <span id="year"></span> Enlazo</span>
+  <span id="footerText">Transparencia para una comunidad más segura.</span>
+</footer>
+
+</div>
+
+<script>
+const translations = {
+es: {
+  badge: "PRIVACIDAD Y TRANSPARENCIA",
+  title: "Política de privacidad",
+  intro: "Conoce qué información puede procesar Enlazo, cómo se utiliza y cómo puedes contactar al equipo sobre tus datos.",
+  updated: "Actualizado: 10 de octubre de 2026",
+  reading: "Lectura aproximada: 5 min",
+  contentsTitle: "EN ESTA PÁGINA",
+  termsLink: "Términos",
+  privacyLink: "Privacidad",
+  footer: "Transparencia para una comunidad más segura.",
+  sections: [
+    ["scope", "1. Alcance", "Esta política explica cómo Enlazo puede procesar información cuando utilizas sus comandos y funciones en Discord. Los datos concretos dependen de las funciones disponibles y de tu uso del bot."],
+    ["collected", "2. Información que puede procesarse", "Enlazo puede procesar identificadores de usuarios y servidores de Discord, nombres de usuario, puntuaciones, estadísticas, rankings, historiales y participación en partidas, configuraciones de servidores y datos técnicos relacionados con comandos e interacciones. La información concreta depende de la función utilizada."],
+    ["purpose", "3. Para qué se utilizan los datos", "La información puede utilizarse para ejecutar juegos, registrar resultados, calcular estadísticas, mantener rankings, recordar configuraciones, mostrar historiales, responder a comandos, detectar abusos, solucionar errores y mantener el funcionamiento del bot."],
+    ["storage", "4. Almacenamiento y conservación", "Los datos pueden almacenarse en archivos o bases de datos utilizados por Enlazo. El periodo de conservación depende del tipo de dato, la función y la implementación actual. No se debe asumir que todos los datos se eliminan automáticamente al salir de un servidor o dejar de utilizar el bot."],
+    ["sharing", "5. Acceso y proveedores externos", "Para funcionar, Enlazo utiliza Discord y puede utilizar servicios externos de alojamiento o almacenamiento. Estos proveedores pueden procesar datos en la medida necesaria para prestar sus servicios y conforme a sus propias políticas. No introduzcas contraseñas ni información personal sensible en comandos."],
+    ["security", "6. Seguridad", "El equipo de Enlazo puede aplicar medidas razonables para proteger la información y mantener el servicio. Sin embargo, ningún sistema conectado a internet puede garantizar seguridad absoluta."],
+    ["requests", "7. Solicitudes sobre tus datos", "Para preguntar qué datos se conservan o solicitar una corrección o eliminación, contacta al equipo desarrollador mediante el canal oficial de soporte de Enlazo. Puede ser necesario proporcionar tu ID de Discord para localizar los registros. Las solicitudes se evaluarán según los datos disponibles y las obligaciones aplicables."],
+    ["minors", "8. Información de menores", "No compartas información personal sensible con el bot. Si crees que se ha almacenado información personal de forma inadecuada, contacta al equipo de soporte."],
+    ["changes", "9. Cambios en esta política", "Esta política puede cambiar si se modifican las funciones, los proveedores o las prácticas de datos de Enlazo. La fecha de actualización se muestra arriba. Revisa esta página periódicamente."],
+    ["contact", "10. Contacto", "Para consultas de privacidad, utiliza el canal oficial de soporte donde se ofrece Enlazo. No envíes contraseñas, tokens de acceso ni otros secretos."]
+  ]
+},
+en: {
+  badge: "PRIVACY & TRANSPARENCY",
+  title: "Privacy Policy",
+  intro: "Learn what information Enlazo may process, how it is used, and how to contact the team about your data.",
+  updated: "Updated: October 10, 2026",
+  reading: "Approx. 5 min read",
+  contentsTitle: "ON THIS PAGE",
+  termsLink: "Terms",
+  privacyLink: "Privacy",
+  footer: "Transparency for a safer community.",
+  sections: [
+    ["scope", "1. Scope", "This policy explains how Enlazo may process information when you use its Discord commands and features. The specific data depends on the available features and how you use the bot."],
+    ["collected", "2. Information that may be processed", "Enlazo may process Discord user and server IDs, usernames, scores, statistics, leaderboards, match history and participation, server settings, and technical data related to commands and interactions. The information involved depends on the feature used."],
+    ["purpose", "3. How data is used", "Information may be used to run games, record results, calculate statistics, maintain leaderboards, remember settings, display history, respond to commands, detect abuse, troubleshoot errors, and operate the bot."],
+    ["storage", "4. Storage and retention", "Data may be stored in files or databases used by Enlazo. Retention depends on the data type, feature, and current implementation. Do not assume all data is automatically deleted when you leave a server or stop using the bot."],
+    ["sharing", "5. Access and external providers", "Enlazo uses Discord and may use external hosting or storage services. These providers may process data as needed to provide their services and under their own policies. Do not enter passwords or sensitive personal information in commands."],
+    ["security", "6. Security", "The Enlazo team may apply reasonable measures to protect information and maintain the service. However, no internet-connected system can guarantee absolute security."],
+    ["requests", "7. Requests about your data", "To ask what data is retained or request correction or deletion, contact the Enlazo development team through its official support channel. Your Discord ID may be needed to locate records. Requests will be assessed based on available data and applicable obligations."],
+    ["minors", "8. Information about minors", "Do not share sensitive personal information with the bot. If you believe personal information has been stored improperly, contact the support team."],
+    ["changes", "9. Changes to this policy", "This policy may change if Enlazo's features, providers, or data practices change. The update date appears above. Review this page periodically."],
+    ["contact", "10. Contact", "For privacy questions, use the official support channel where Enlazo is offered. Do not send passwords, access tokens, or other secrets."]
+  ]
+},
+pt: {
+  badge: "PRIVACIDADE E TRANSPARÊNCIA",
+  title: "Política de Privacidade",
+  intro: "Saiba quais informações o Enlazo pode processar, como são usadas e como entrar em contato com a equipe sobre seus dados.",
+  updated: "Atualizado: 10 de outubro de 2026",
+  reading: "Leitura aproximada: 5 min",
+  contentsTitle: "NESTA PÁGINA",
+  termsLink: "Termos",
+  privacyLink: "Privacidade",
+  footer: "Transparência para uma comunidade mais segura.",
+  sections: [
+    ["scope", "1. Escopo", "Esta política explica como o Enlazo pode processar informações quando você usa seus comandos e recursos no Discord. Os dados específicos dependem dos recursos disponíveis e do uso do bot."],
+    ["collected", "2. Informações que podem ser processadas", "O Enlazo pode processar IDs de usuários e servidores do Discord, nomes de usuário, pontuações, estatísticas, rankings, histórico e participação em partidas, configurações de servidores e dados técnicos relacionados a comandos e interações."],
+    ["purpose", "3. Como os dados são usados", "As informações podem ser usadas para executar jogos, registrar resultados, calcular estatísticas, manter rankings, lembrar configurações, exibir históricos, responder a comandos, detectar abusos, corrigir erros e manter o bot funcionando."],
+    ["storage", "4. Armazenamento e retenção", "Os dados podem ser armazenados em arquivos ou bancos de dados usados pelo Enlazo. O período de retenção depende do tipo de dado, do recurso e da implementação atual. Não presuma que todos os dados são apagados automaticamente ao sair de um servidor ou parar de usar o bot."],
+    ["sharing", "5. Acesso e provedores externos", "O Enlazo utiliza o Discord e pode utilizar serviços externos de hospedagem ou armazenamento. Esses provedores podem processar dados conforme necessário para prestar seus serviços e de acordo com suas próprias políticas. Não informe senhas nem dados pessoais sensíveis em comandos."],
+    ["security", "6. Segurança", "A equipe do Enlazo pode aplicar medidas razoáveis para proteger as informações e manter o serviço. Nenhum sistema conectado à internet pode garantir segurança absoluta."],
+    ["requests", "7. Solicitações sobre seus dados", "Para perguntar quais dados são mantidos ou solicitar correção ou exclusão, entre em contato com a equipe pelo canal oficial de suporte do Enlazo. Seu ID do Discord pode ser necessário para localizar registros."],
+    ["minors", "8. Informações de menores", "Não compartilhe informações pessoais sensíveis com o bot. Se acreditar que dados pessoais foram armazenados de forma inadequada, entre em contato com o suporte."],
+    ["changes", "9. Alterações nesta política", "Esta política pode mudar se os recursos, fornecedores ou práticas de dados do Enlazo mudarem. A data de atualização aparece acima. Consulte esta página periodicamente."],
+    ["contact", "10. Contato", "Para questões de privacidade, use o canal oficial de suporte onde o Enlazo é oferecido. Não envie senhas, tokens de acesso ou outros segredos."]
+  ]
+},
+fr: {
+  badge: "CONFIDENTIALITÉ ET TRANSPARENCE",
+  title: "Politique de confidentialité",
+  intro: "Découvrez quelles informations Enlazo peut traiter, comment elles sont utilisées et comment contacter l’équipe à propos de vos données.",
+  updated: "Mis à jour : 10 octobre 2026",
+  reading: "Lecture : environ 5 min",
+  contentsTitle: "SUR CETTE PAGE",
+  termsLink: "Conditions",
+  privacyLink: "Confidentialité",
+  footer: "La transparence pour une communauté plus sûre.",
+  sections: [
+    ["scope", "1. Champ d’application", "Cette politique explique comment Enlazo peut traiter des informations lorsque vous utilisez ses commandes et fonctionnalités Discord. Les données concernées dépendent des fonctionnalités disponibles et de votre utilisation du bot."],
+    ["collected", "2. Informations susceptibles d’être traitées", "Enlazo peut traiter les identifiants d’utilisateurs et de serveurs Discord, les noms d’utilisateur, scores, statistiques, classements, historiques et participations aux parties, paramètres de serveur et données techniques liées aux commandes et interactions."],
+    ["purpose", "3. Utilisation des données", "Les informations peuvent servir à lancer des jeux, enregistrer les résultats, calculer des statistiques, gérer les classements, mémoriser les paramètres, afficher l’historique, répondre aux commandes, détecter les abus, résoudre les erreurs et faire fonctionner le bot."],
+    ["storage", "4. Stockage et conservation", "Les données peuvent être stockées dans des fichiers ou bases de données utilisés par Enlazo. La durée de conservation dépend du type de données, de la fonctionnalité et de l’implémentation actuelle. Ne supposez pas que toutes les données sont automatiquement supprimées lorsque vous quittez un serveur ou cessez d’utiliser le bot."],
+    ["sharing", "5. Accès et fournisseurs externes", "Enlazo utilise Discord et peut utiliser des services externes d’hébergement ou de stockage. Ces fournisseurs peuvent traiter les données nécessaires à leurs services selon leurs propres politiques. Ne saisissez pas de mots de passe ni d’informations personnelles sensibles dans les commandes."],
+    ["security", "6. Sécurité", "L’équipe Enlazo peut appliquer des mesures raisonnables pour protéger les informations et maintenir le service. Aucun système connecté à Internet ne peut garantir une sécurité absolue."],
+    ["requests", "7. Demandes concernant vos données", "Pour demander quelles données sont conservées ou solliciter une correction ou suppression, contactez l’équipe via le canal officiel d’assistance d’Enlazo. Votre identifiant Discord peut être nécessaire pour retrouver les données."],
+    ["minors", "8. Informations concernant les mineurs", "Ne partagez pas d’informations personnelles sensibles avec le bot. Si vous pensez que des données personnelles ont été stockées de manière inappropriée, contactez l’assistance."],
+    ["changes", "9. Modifications de cette politique", "Cette politique peut évoluer si les fonctionnalités, fournisseurs ou pratiques de données d’Enlazo changent. La date de mise à jour figure ci-dessus. Consultez cette page régulièrement."],
+    ["contact", "10. Contact", "Pour toute question de confidentialité, utilisez le canal officiel d’assistance où Enlazo est proposé. N’envoyez pas de mots de passe, de jetons d’accès ou d’autres secrets."]
+  ]
+}
+};
+
+function renderPage() {
+  const lang = document.getElementById("language").value;
+  const t = translations[lang];
+
+  document.documentElement.lang = lang;
+  document.getElementById("badge").textContent = t.badge;
+  document.getElementById("pageTitle").textContent = t.title;
+  document.getElementById("intro").textContent = t.intro;
+  document.getElementById("updated").textContent = t.updated;
+  document.getElementById("reading").textContent = t.reading;
+  document.getElementById("contentsTitle").textContent = t.contentsTitle;
+  document.getElementById("termsLink").textContent = t.termsLink;
+  document.getElementById("privacyLink").textContent = t.privacyLink;
+  document.getElementById("footerText").textContent = t.footer;
+
+  document.getElementById("contents").innerHTML =
+    t.sections.map(s => `<a href="#${s[0]}">${s[1]}</a>`).join("");
+
+  document.getElementById("sections").innerHTML =
+    t.sections.map(s =>
+      `<section id="${s[0]}"><h2>${s[1]}</h2><p>${s[2]}</p></section>`
+    ).join("");
+}
+
+document.getElementById("language").addEventListener("change", renderPage);
+document.getElementById("year").textContent = new Date().getFullYear();
+renderPage();
+</script>
 </body>
 </html>
